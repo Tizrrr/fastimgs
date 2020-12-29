@@ -1,0 +1,105 @@
+.h6{ position: fixed; display: none; bottom: 0px; left: 10px; font-size: 13px } @media (min-width: 1200px){ #xl{ display: block; } } @media (min-width: 992px) and (max-width: 1199px){ #lg{ display: block; } } @media (min-width: 768px) and (max-width: 991px){ #md{ display: block; } } @media (min-width: 576px) and (max-width: 767px){ #sm{ display: block; } } @media (max-width: 576px){ #Extrasmall{ display: block; } }
+ 
+ 
+body{
+    background: #eeeded url('vL5c6W.png') repeat fixed;
+}
+ .container{
+   margin: 50px auto;
+}
+input[type=radio]{
+  display: none;
+}
+.navigation{
+  display: flex;
+}
+.navigation .items{
+  border: 1px solid #00a7e6;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 15px;
+  margin-right: 3px;
+  color: #00a7e6;
+  cursor: pointer;
+}
+.navigation .items:hover{
+  background: #00a7e6;
+  color: #fff;
+}
+.container .images{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  transition: transform .2s ease;
+}
+.container .images .image{
+  width: 265px;
+  overflow: hidden;
+  /* display: flex; */
+  margin: 3px;
+  background: #dedede;
+  position: relative;
+}
+.container .images .image .img-hover{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, transparent 20%, #000000 );
+  opacity: 0;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+.container .images .image .img-hover:hover{
+  opacity: 1
+}
+.container .images .image img{
+  width: 100%;
+  display: none;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+.container .images .image img:hover{
+  transform: scale(1.1);
+}
+ 
+#all:checked ~ .navigation nav .all{
+  background: #00a7e6;
+  color: #fff;
+}
+#all:checked ~ .images .image img.all{
+  display: block;
+}
+#tree:checked ~ .navigation nav .tree{
+  background: #00a7e6;
+  color: #fff;
+}
+#tree:checked ~ .images .image img.tree{
+  display: block;
+}
+#bag:checked ~ .navigation nav .bag{
+  background: #00a7e6;
+  color: #fff;
+}
+#bag:checked ~ .images .image img.bag{
+  display: block;
+}
+#camera:checked ~ .navigation nav .camera{
+  background: #00a7e6;
+  color: #fff;
+}
+#camera:checked ~ .images .image img.camera{
+  display: block;
+}
+#rocket:checked ~ .navigation nav .rocket{
+  background: #00a7e6;
+  color: #fff;
+}
+#rocket:checked ~ .images .image img.rocket{
+  display: block;
+}
+@media (max-width: 767px){
+  .container .images .image{
+    width: 90vw;
+    margin: 3px auto
+  }
+}
